@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Slacker News</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles1.css">
   </head>
   <body>
     <div class="heading">
@@ -12,12 +12,12 @@
     </div>
     <div class="main_content">
       <ol>
-          <% @news_method.each do |news_item| %>
+          <% @articles.each do |news_item| %>
           <li>
-            <a href="http://<%= news_item[:url] %>" target="_blank"> <%= "#{news_item[:title]}" %></a>
-            <span class="light_grey">(<%= "#{news_item[:url]}" %>)
+            <a href="http://<%= news_item["url"] %>" target="_blank"> <%= "#{news_item["title"]}" %></a>
+            <span class="light_grey">(<%= "#{news_item["url"]}" %>)
             <br>
-            <%= "#{news_item[:description]}" %></span>
+            <%= "#{news_item["description"]}" %></span>
           </li>
           <br>
           <% end %>
