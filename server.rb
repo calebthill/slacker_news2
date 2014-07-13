@@ -14,9 +14,7 @@ require 'pry'
   end
 end
 
-
 ########## Test Methods ############
-
 def test_title(title)
   if title == ""
     false
@@ -51,7 +49,6 @@ get '/comment' do
   @errors
   erb :comment
 end
-
 
 post '/comment' do
   ptitle = params["title"]
